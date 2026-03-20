@@ -2,6 +2,8 @@ Hola soy Carlos Nava Rodríguez estudiante de Ingeniería en Computación en la 
 
 "Dawn of Victory" es un simulador de duelos por turnos desarrollado en Godot Engine 4.6, inspirado en las mecánicas clásicas de los RPG de GameBoy como Pokémon. El proyecto implementa un bucle de combate completo, gestión de estados alterados, inventario estratégico y una cinemática final dinámica.
 
+Itchio: https://karlosdev.itch.io/dawn-of-victory
+
 El juego utiliza una máquina de estados lógica gestionada por código para controlar el flujo de la batalla:
 
 Turno del Jugador: El usuario puede elegir entre atacar, usar objetos de la mochila o intentar huir.
