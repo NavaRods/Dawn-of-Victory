@@ -1,0 +1,548 @@
+[gd_scene format=3 uid="uid://dwuigk6dgc5cp"]
+
+[ext_resource type="Script" uid="uid://skmymabp367n" path="res://BattleScene.gd" id="1_ceay6"]
+[ext_resource type="Texture2D" uid="uid://du57ptmjf0vpa" path="res://assets/Enemy/Demonio/Demonio_atque_1.png" id="1_npxts"]
+[ext_resource type="Texture2D" uid="uid://kloy2g368hab" path="res://assets/Player/Guerrero_de_pie_mov_1.png" id="1_ttbo7"]
+[ext_resource type="Texture2D" uid="uid://dow3hyab4hys7" path="res://assets/Player/Guerrero_de_pie_mov_2.png" id="2_b278l"]
+[ext_resource type="Texture2D" uid="uid://dcmogcm4m1vxf" path="res://assets/Enemy/Demonio/Demonio_atque_2.png" id="2_pfdgg"]
+[ext_resource type="Texture2D" uid="uid://b831m625r8snw" path="res://assets/Enemy/Demonio/Demonio_ataque_3.png" id="3_dvttb"]
+[ext_resource type="Texture2D" uid="uid://c5yxmmjwl72mj" path="res://assets/Enemy/Demonio/Demonio_mov_1.png" id="4_wysa5"]
+[ext_resource type="Texture2D" uid="uid://dna6pfckqn5ug" path="res://assets/Enemy/Demonio/Demonio_mov_2.png" id="5_xsmdi"]
+[ext_resource type="Texture2D" uid="uid://dsjwgcopw2bxh" path="res://assets/Enemy/Dragon/dragon_ataque_1.png" id="6_ceay6"]
+[ext_resource type="Texture2D" uid="uid://c1e1yrw0rldor" path="res://assets/Enemy/Dragon/dragon_ataque_2.png" id="7_3840f"]
+[ext_resource type="Texture2D" uid="uid://ce08ldmh00e1" path="res://assets/Enemy/Dragon/dragon_ataque_3.png" id="8_de5hx"]
+[ext_resource type="Texture2D" uid="uid://dr6plwua82w4e" path="res://assets/Enemy/Dragon/dragon_ataque_4.png" id="9_ntklk"]
+[ext_resource type="Texture2D" uid="uid://cbphs0mgt1oig" path="res://assets/Enemy/Dragon/dragon_mov_1.png" id="10_a4hwc"]
+[ext_resource type="Texture2D" uid="uid://ho7kvafpvwsg" path="res://assets/Enemy/Dragon/dragon_mov_2.png" id="11_ryy2i"]
+[ext_resource type="Texture2D" uid="uid://byl5ap564uvsx" path="res://assets/Enemy/Dragon/dragon_mov_3.png" id="12_4sj51"]
+[ext_resource type="Texture2D" uid="uid://bdkq7xecsqo66" path="res://assets/Enemy/Golem/Golem_ataque_1.png" id="13_4vvt8"]
+[ext_resource type="Texture2D" uid="uid://7ia021xjtefd" path="res://assets/Enemy/Golem/Golem_ataque_2.png" id="14_akchn"]
+[ext_resource type="Texture2D" uid="uid://cw6ybkt62q6hv" path="res://assets/Enemy/Golem/Golem_mov_1.png" id="15_x7lav"]
+[ext_resource type="Texture2D" uid="uid://v6827stvw6mo" path="res://assets/Enemy/Golem/Golem_mov_2.png" id="16_xj0el"]
+[ext_resource type="Texture2D" uid="uid://be2p6kvp5lxy3" path="res://assets/Player/Guerrero_preparando_ataque.png" id="18_xsmdi"]
+[ext_resource type="Texture2D" uid="uid://c13pd7hi1a6i8" path="res://assets/Player/Guerrero_preparando_ataque_2.png" id="19_ceay6"]
+[ext_resource type="Texture2D" uid="uid://b458eld2xge3a" path="res://assets/Player/Guerrero_cargando_ataque.png" id="20_3840f"]
+[ext_resource type="Texture2D" uid="uid://c2xcgac6qbeyh" path="res://assets/Player/Guerrero_realizando_ataque.png" id="21_de5hx"]
+
+[sub_resource type="Animation" id="Animation_r84l2"]
+resource_name = "Demonio_ataque"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20332427, 0.72916293),
+"transitions": PackedFloat32Array(0, 1, 1),
+"update": 1,
+"values": [ExtResource("1_npxts"), ExtResource("2_pfdgg"), ExtResource("3_dvttb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001, 0.20332427, 0.72916293),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(934, 230), Vector2(934, 230), Vector2(934, 230)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mobn2"]
+resource_name = "Demonio_mov"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.29797524),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_wysa5"), ExtResource("5_xsmdi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.29797524),
+"transitions": PackedFloat32Array(1, 0.5176326),
+"update": 0,
+"values": [Vector2(950, 230), Vector2(950, 250)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m103v"]
+resource_name = "Dragon_atacando"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20000002, 0.3, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_ceay6"), ExtResource("7_3840f"), ExtResource("8_de5hx"), ExtResource("9_ntklk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20000002, 0.3, 0.76666665),
+"transitions": PackedFloat32Array(0, 0, 0, 0),
+"update": 0,
+"values": [Vector2(936, 270), Vector2(944, 260), Vector2(942, 260), Vector2(944, 260)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_7c5t4"]
+resource_name = "Dragon_volando"
+length = 0.56666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 1,
+"values": [ExtResource("10_a4hwc"), ExtResource("11_ryy2i"), ExtResource("12_4sj51")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [Vector2(955, 230), Vector2(952, 230), Vector2(944, 253)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.20332427, 0.41365975, 0.56666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_50knp"]
+resource_name = "Golem_Ataque"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.39963737),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("13_4vvt8"), ExtResource("14_akchn")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.39963737),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector2(961, 187), Vector2(961, 187)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b34gu"]
+resource_name = "Golem_normal"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("15_x7lav"), ExtResource("16_xj0el")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector2(1000, 200), Vector2(1000, 200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.9166667, 0.9166666), Vector2(0.9166667, 0.9166666)]
+}
+
+[sub_resource type="Animation" id="Animation_0niqr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_xsmdi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-47, -99)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3lml"]
+_data = {
+&"Demonio_ataque": SubResource("Animation_r84l2"),
+&"Demonio_mov": SubResource("Animation_mobn2"),
+&"Dragon_atacando": SubResource("Animation_m103v"),
+&"Dragon_volando": SubResource("Animation_7c5t4"),
+&"Golem_Ataque": SubResource("Animation_50knp"),
+&"Golem_normal": SubResource("Animation_b34gu"),
+&"RESET": SubResource("Animation_0niqr")
+}
+
+[sub_resource type="Animation" id="Animation_hvnqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Combatants/Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Combatants/Player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_b278l")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Combatants/Player:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-32, -149)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Combatants/Player:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ntklk"]
+resource_name = "player_atacar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Combatants/Player:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_xsmdi"), ExtResource("19_ceay6"), ExtResource("20_3840f"), ExtResource("21_de5hx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Combatants/Player:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Combatants/Player:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(400, 360), Vector2(400, 360), Vector2(400, 360), Vector2(400, 360)]
+}
+
+[sub_resource type="Animation" id="Animation_musxc"]
+resource_name = "player_moverse"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Combatants/Player:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_ttbo7"), ExtResource("2_b278l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Combatants/Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0, 0),
+"update": 0,
+"values": [Vector2(400, 360), Vector2(420, 360)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Combatants/Player:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_teshm"]
+_data = {
+&"RESET": SubResource("Animation_hvnqj"),
+&"player_atacar": SubResource("Animation_ntklk"),
+&"player_moverse": SubResource("Animation_musxc")
+}
+
+[node name="BattleScene" type="Node2D" unique_id=1244551328]
+script = ExtResource("1_ceay6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1007259198]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Combatants" type="Node2D" parent="." unique_id=1851141201]
+
+[node name="AnimationEnemy" type="AnimationPlayer" parent="Combatants" unique_id=1077583006]
+root_node = NodePath("../Enemy")
+libraries/ = SubResource("AnimationLibrary_f3lml")
+
+[node name="Enemy" type="Sprite2D" parent="Combatants" unique_id=1685246961]
+position = Vector2(-47, -99)
+texture = ExtResource("5_xsmdi")
+flip_h = true
+region_rect = Rect2(245.16704, 204.46014, 76.040665, 6.0646057)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Combatants" unique_id=214615089]
+root_node = NodePath("../..")
+callback_mode_method = 1
+libraries/ = SubResource("AnimationLibrary_teshm")
+autoplay = &"player_moverse"
+
+[node name="Player" type="Sprite2D" parent="Combatants" unique_id=1428194832]
+position = Vector2(-32, -149)
+texture = ExtResource("2_b278l")
+offset = Vector2(-35, 0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=317279408]
+
+[node name="HealthBars" type="Control" parent="UI" unique_id=2055911356]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="UI/HealthBars" unique_id=451096273]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 511.0
+offset_right = 568.0
+offset_bottom = 538.0
+step = 1.0
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="UI/HealthBars" unique_id=399944028]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 339.0
+offset_right = 1120.0
+offset_bottom = 366.0
+step = 1.0
+
+[node name="ActionMenu" type="GridContainer" parent="UI" unique_id=30453745]
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.752
+anchor_right = 0.677
+anchor_bottom = 0.99600005
+offset_left = 122.15997
+offset_top = 1.5599976
+offset_right = 303.44
+offset_bottom = 1.079956
+grow_horizontal = 0
+grow_vertical = 0
+columns = 2
+
+[node name="BtnAttack1" type="Button" parent="UI/ActionMenu" unique_id=806974823]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Ataque 1"
+
+[node name="BtnAttack2" type="Button" parent="UI/ActionMenu" unique_id=82888840]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Ataque 2"
+
+[node name="BtnItem" type="Button" parent="UI/ActionMenu" unique_id=1199451269]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Mochila"
+
+[node name="BtnFlee" type="Button" parent="UI/ActionMenu" unique_id=1271417738]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Corre"
+
+[node name="BattleLog" type="Label" parent="UI" unique_id=2067232855]
+offset_left = 24.0
+offset_top = 551.0
+offset_right = 671.0
+offset_bottom = 700.0
+
+[connection signal="pressed" from="UI/ActionMenu/BtnAttack1" to="." method="_on_btn_attack_1_pressed"]
+[connection signal="pressed" from="UI/ActionMenu/BtnAttack2" to="." method="_on_btn_attack_2_pressed"]

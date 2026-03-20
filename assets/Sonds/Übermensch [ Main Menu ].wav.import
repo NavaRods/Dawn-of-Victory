@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://doa8d44torapm"
+path="res://.godot/imported/Übermensch [ Main Menu ].wav-f1a095eab84771fe0046f33925f78575.sample"
+
+[deps]
+
+source_file="res://assets/Sonds/Übermensch [ Main Menu ].wav"
+dest_files=["res://.godot/imported/Übermensch [ Main Menu ].wav-f1a095eab84771fe0046f33925f78575.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
